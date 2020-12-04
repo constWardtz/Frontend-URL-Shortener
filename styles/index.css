@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+}
+
+/* Variables */
+:root {
+  --primary: rgb(241, 241, 241);
+  --secondary: rgb(27, 27, 27);
+  --main-color: rgb(102, 179, 243);
+  --transition: all ease-in-out .5s;
+}
+
+/* Reset */
+a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+ul, li {
+  list-style: none;
+}
+
+button {
+  padding: 10px;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+button {
+  background-color: var(--main-color);
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--secondary);
+  color: var(--primary);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+img {
+  width: 100%;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+/* Mobile Style */
+.main {
+  height: 100vh;
+  max-width: 900px;
+  margin: 30px;
+  /* Showcase */
+}
+
+.main .navbar {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.main .navbar .icon {
+  margin-left: 2rem;
+}
+
+.main .navbar .icon i {
+  font-size: 1.5rem;
+}
+
+.main .navbar .icon i:hover {
+  cursor: pointer;
+  color: var(--main-color);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.main .navbar .menu {
+  display: none;
+}
+
+.main .showcase {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 5rem;
+}
+
+.main .showcase .img-container {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: -1;
+  grid-row: 2/1;
+}
+
+.main .showcase .txt-container {
+  margin-top: 4rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: .8rem;
+}
+
+.main .showcase .txt-container h1 {
+  font-size: 2.5rem;
+}
+
+.main .showcase .txt-container p {
+  line-height: 1.5rem;
+}
+
+/* Laptop */
+@media screen and (min-width: 901px) {
+  .main {
+    margin: 20px;
+    max-width: unset;
+  }
+  .main .navbar .icon {
+    margin-left: 0;
+  }
+  .main .showcase {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    grid-gap: 2rem;
+  }
+  .main .showcase .txt-container {
+    margin-top: unset;
+    grid-gap: .8rem;
+  }
+  .main .showcase .txt-container h1 {
+    font-size: 5em;
+  }
+  .main .showcase .txt-container p {
+    line-height: 1.5rem;
+  }
+}
+
+/* Desktop */
+/*# sourceMappingURL=index.css.map */

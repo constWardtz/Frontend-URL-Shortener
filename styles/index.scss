@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat;
+}
+
+/* Variables */ 
+:root{
+    --primary: rgb(241, 241, 241);
+    --secondary: rgb(27, 27, 27);
+    --main-color: rgb(102, 179, 243);
+
+    --transition: all ease-in-out .5s;
+}
+/* Reset */ 
+a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+ul, li {
+    list-style: none;
+}
+
+button{
+    padding: 10px;
+}
+
+body{
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+button{
+    background-color: var(--main-color);
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: var(--primary);
+    font-size: 1rem;
+    
+    &:hover{
+        cursor: pointer;
+        background-color: var(--secondary);
+        color: var(--primary);
+        transition: var(--transition)
+    }
+}
+
+img{
+    width: 100%;
+}
+
+.grid{
+    display: grid;
+}
+
+/* Mobile Style */ 
+.main{
+    height: 100vh;
+    max-width: 900px;
+    margin: 30px;
+
+    .navbar{
+        // position: fixed;
+        // top: 0;
+        width: 100%;   
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+
+        .icon{
+            margin-left: 2rem;
+            i{
+                font-size: 1.5rem;
+
+                &:hover{
+                    cursor: pointer;
+                    color: var(--main-color);
+                    transition: var(--transition)
+                }
+            }
+        }
+        
+        .menu{
+            display: none;
+        }
+    } 
+
+    /* Showcase */ 
+    .showcase{
+        display: grid;
+        margin-top: 5rem;
+
+        .img-container{
+            grid-row: 2/1;
+        }
+
+        .txt-container{
+            margin-top: 4rem;
+            display: grid;
+            grid-gap: .8rem;
+
+            h1{
+                font-size: 2.5rem;
+            }
+
+            p{
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
+
+/* Laptop */ 
+@media screen and (min-width: 901px){
+   .main{
+        margin: 20px;
+        max-width: unset;
+
+        .navbar{
+            .icon{
+                margin-left: 0;
+            }
+        } 
+
+        .showcase{
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+            grid-gap: 2rem;
+            .txt-container{
+                margin-top: unset;
+                grid-gap: .8rem;
+
+                h1{
+                    font-size: 5em;
+                }
+
+                p{
+                    line-height: 1.5rem;
+                }
+            }
+        }
+   }
+}
+
+/* Desktop */ 
