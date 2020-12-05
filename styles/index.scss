@@ -179,7 +179,7 @@ img {
       place-items: center;
 
       .img-container {
-        position: relative;
+        justify-self: center;
         grid-row: 2/1;
 
         img {

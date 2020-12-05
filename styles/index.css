@@ -210,7 +210,8 @@ img {
 }
 
 .main-container .hero .showcase .img-container {
-  position: relative;
+  -ms-grid-column-align: center;
+      justify-self: center;
   -ms-grid-row: 2;
   -ms-grid-row-span: -1;
   grid-row: 2/1;
