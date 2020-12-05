@@ -33,6 +33,7 @@ li {
 body {
   background-color: var(--primary);
   color: var(--secondary);
+  overflow-x: hidden;
 }
 
 input {
@@ -72,7 +73,7 @@ img {
 .main-container {
   /* Layout */
   display: grid;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2, 1fr);
 
   /* ============================== Hero ============================== */
 
@@ -268,9 +269,11 @@ img {
     height: 100vh;
     max-width: 788px;
     margin: 30px;
+    padding: 5px;
 
     /* Layout */
     display: grid;
+    grid-template-rows: repeat(2, auto);
 
     /* Shortly Container */
     .shortly-container {
@@ -304,7 +307,7 @@ img {
 
     /* Service Container */
     .service-container {
-      height: 100vh;
+      height: auto;
       margin-top: 4rem;
       .content {
         display: grid;
@@ -457,8 +460,8 @@ img {
   }
 
   /* ============================== Footer ============================== */
-  .footer-container {
-    height: 80vh;
-    max-width: 788px;
-  }
+  //   .footer-container {
+  //     height: 80vh;
+  //     max-width: 788px;
+  //   }
 }

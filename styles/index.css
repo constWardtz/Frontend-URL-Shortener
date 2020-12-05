@@ -34,6 +34,7 @@ li {
 body {
   background-color: var(--primary);
   color: var(--secondary);
+  overflow-x: hidden;
 }
 
 input {
@@ -76,8 +77,8 @@ img {
   /* Layout */
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (auto)[2];
-      grid-template-rows: repeat(2, auto);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
   /* ============================== Hero ============================== */
   /* Mobile Style */
   /* Laptop */
@@ -283,9 +284,12 @@ img {
   height: 100vh;
   max-width: 788px;
   margin: 30px;
+  padding: 5px;
   /* Layout */
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
   /* Shortly Container */
   /* Service Container */
 }
@@ -328,7 +332,7 @@ img {
 }
 
 .main-container .main .service-container {
-  height: 100vh;
+  height: auto;
   margin-top: 4rem;
 }
 
@@ -474,10 +478,5 @@ img {
   .main-container .main .service-container .content .item:nth-child(4) p {
     font-size: 0.9rem;
   }
-}
-
-.main-container .footer-container {
-  height: 80vh;
-  max-width: 788px;
 }
 /*# sourceMappingURL=index.css.map */
