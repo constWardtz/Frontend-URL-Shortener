@@ -486,6 +486,17 @@ img {
   }
 }
 
+@media screen and (min-width: 789px) {
+  .main-container .main .service-container .content .intro p {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  .main-container .main .service-container .content .item p {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+}
+
 @media screen and (min-width: 861px) {
   .main-container .main {
     max-width: unset;

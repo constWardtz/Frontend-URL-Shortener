@@ -452,6 +452,25 @@ img {
 
   /* Laptop */
   @media screen and (min-width: 789px) {
+    .main {
+      .service-container {
+        .content {
+          .intro {
+            p {
+              font-size: 1rem;
+              font-weight: 100;
+            }
+          }
+
+          .item {
+            p {
+              font-size: 1rem;
+              font-weight: 100;
+            }
+          }
+        }
+      }
+    }
   }
 
   /* Desktop */
