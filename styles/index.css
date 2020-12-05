@@ -358,9 +358,10 @@ img {
   z-index: 2;
   background-color: var(--hero-color);
   padding: 25px;
-  border-radius: 50%;
+  border-radius: 100%;
   position: relative;
   top: -40px;
+  font-size: 2.5rem;
 }
 
 .main .service-container .content .item p {
