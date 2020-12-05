@@ -30,11 +30,6 @@ ul, li {
   list-style: none;
 }
 
-button {
-  padding: 10px;
-  border-radius: 5px;
-}
-
 body {
   background-color: var(--primary);
   color: var(--secondary);
@@ -53,7 +48,8 @@ button {
   border: none;
   outline: none;
   color: var(--primary);
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 750 !important;
 }
 
 button:hover {
@@ -212,7 +208,7 @@ img {
     grid-gap: 1rem;
   }
   .hero .navbar .menu .actions button {
-    width: 6rem;
+    width: 8rem;
     font-weight: 700;
   }
   .hero .navbar .menu .actions button:nth-child(1) {
@@ -277,9 +273,9 @@ img {
 
 .main .shrink-container {
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-color: var(--hero-color);
-  padding: 10px;
+  padding: 40px 15px 40px 15px;
   border-radius: 5px;
   z-index: 5;
   /* Layout */
@@ -299,16 +295,16 @@ img {
 }
 
 .main .shrink-container input {
-  padding: 20px;
+  padding: 22px;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .main .shrink-container button {
   background-color: var(--secondary);
   margin-top: 1rem;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   font-weight: 500;
 }
 
@@ -389,8 +385,24 @@ img {
   .main {
     max-width: unset;
   }
+  .main .shrink-container {
+    height: 180px;
+    width: 80%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 50px;
+  }
+  .main .shrink-container button {
+    margin-bottom: 1rem;
+    width: 40%;
+    margin-left: 1rem;
+  }
   .main .service-container {
-    margin-top: 7rem;
+    margin: 7rem 3rem 0 3rem;
   }
   .main .service-container .content {
     -ms-grid-columns: auto;
