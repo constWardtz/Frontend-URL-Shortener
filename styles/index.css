@@ -50,6 +50,7 @@ button {
   color: var(--primary);
   font-size: 1.2rem;
   font-weight: 750 !important;
+  border-radius: 5px;
 }
 
 button:hover {
@@ -328,6 +329,7 @@ img {
   padding: 10px;
   line-height: 33px;
   margin-top: -2rem;
+  margin-bottom: .5rem;
 }
 
 .main .service-container .content .intro p {
@@ -387,7 +389,7 @@ img {
   }
   .main .shortly-container {
     height: 180px;
-    width: 80%;
+    width: 92%;
     -ms-grid-column-align: center;
         justify-self: center;
     -webkit-box-orient: horizontal;
@@ -400,6 +402,10 @@ img {
     margin-bottom: 1rem;
     width: 40%;
     margin-left: 1rem;
+  }
+  .main .shortly-container input {
+    font-size: 1.5rem;
+    padding: 17px;
   }
   .main .service-container {
     margin: 7rem 3rem 0 3rem;

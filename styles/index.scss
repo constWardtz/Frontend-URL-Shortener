@@ -50,6 +50,7 @@ button{
     color: var(--primary);
     font-size: 1.2rem;
     font-weight: 750!important;
+    border-radius: 5px;
     
     &:hover{
         cursor: pointer;
@@ -310,6 +311,7 @@ img{
                     padding: 10px;
                     line-height: 33px;
                     margin-top: -2rem;
+                    margin-bottom: .5rem;
                 }
 
                 p{
@@ -401,7 +403,7 @@ img{
 
         .shortly-container{
             height: 180px;
-            width: 80%;
+            width: 92%;
             justify-self: center;
             flex-direction: row;
             padding: 50px;
@@ -410,6 +412,11 @@ img{
                 margin-bottom: 1rem;
                 width: 40%;
                 margin-left: 1rem;
+            }
+
+            input{
+                font-size: 1.5rem;
+                padding: 17px;
             }
         }
         .service-container{
