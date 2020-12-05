@@ -267,11 +267,11 @@ img {
   /* Layout */
   display: -ms-grid;
   display: grid;
-  /* Shrink Container */
+  /* Shortly Container */
   /* Service Container */
 }
 
-.main .shrink-container {
+.main .shortly-container {
   width: 100%;
   height: 200px;
   background-color: var(--hero-color);
@@ -294,13 +294,13 @@ img {
           flex-direction: column;
 }
 
-.main .shrink-container input {
+.main .shortly-container input {
   padding: 22px;
   width: 100%;
   font-size: 1rem;
 }
 
-.main .shrink-container button {
+.main .shortly-container button {
   background-color: var(--secondary);
   margin-top: 1rem;
   width: 100%;
@@ -385,7 +385,7 @@ img {
   .main {
     max-width: unset;
   }
-  .main .shrink-container {
+  .main .shortly-container {
     height: 180px;
     width: 80%;
     -ms-grid-column-align: center;
@@ -396,7 +396,7 @@ img {
             flex-direction: row;
     padding: 50px;
   }
-  .main .shrink-container button {
+  .main .shortly-container button {
     margin-bottom: 1rem;
     width: 40%;
     margin-left: 1rem;
