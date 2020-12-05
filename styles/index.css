@@ -452,15 +452,20 @@ img {
   place-items: center;
 }
 
-.main-container .main .service-container .content .item i {
-  font-size: 2rem;
+.main-container .main .service-container .content .item .icon {
   z-index: 2;
   background-color: var(--hero-color);
-  padding: 25px;
   border-radius: 100%;
   position: relative;
-  top: -40px;
-  font-size: 2.5rem;
+  top: -50px;
+  padding: 30px;
+  width: 10px;
+  height: 10px;
+}
+
+.main-container .main .service-container .content .item .icon i {
+  color: var(--secondary);
+  font-size: 3.4rem;
 }
 
 .main-container .main .service-container .content .item p {
