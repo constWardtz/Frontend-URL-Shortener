@@ -3,14 +3,18 @@
 ### Desktop
 ![Screen shot](/assets/screenshot1.JPG)
 ![Screen shot](/assets/screenshot2.JPG)
+![Screen shot](/assets/screenshot7.JPG)
 
 ### Tablet & Laptop
 ![Screen shot](/assets/screenshot5.JPG)
 ![Screen shot](/assets/screenshot6.JPG)
+![Screen shot](/assets/screenshot8.JPG)
 
 ### Mobile
 ![Screen shot](/assets/screenshot3.JPG)
 ![Screen shot](/assets/screenshot4.JPG)
+![Screen shot](/assets/screenshot9.JPG)
+![Screen shot](/assets/screenshot10.JPG)
 
 ### `constWardtz Accounts`
 
