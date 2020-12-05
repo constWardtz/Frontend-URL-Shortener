@@ -21,6 +21,19 @@ body {
 }
 
 /* Reset */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--hero-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary);
+}
+
 .menu {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -214,7 +227,7 @@ img {
   line-height: 1.5rem;
 }
 
-@media screen and (min-width: 789px) {
+@media screen and (min-width: 838px) {
   .main-container .hero {
     margin: 20px;
     max-width: unset;

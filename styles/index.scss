@@ -19,7 +19,21 @@ body {
   --transition: all ease-in-out 0.3s;
   --shadow: rgb(223, 209, 209) 0 0 2px 0;
 }
+
 /* Reset */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--hero-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary);
+}
 
 .menu {
   user-select: none;
@@ -186,7 +200,7 @@ img {
   }
 
   /* Laptop */
-  @media screen and (min-width: 789px) {
+  @media screen and (min-width: 838px) {
     .hero {
       margin: 20px;
       max-width: unset;

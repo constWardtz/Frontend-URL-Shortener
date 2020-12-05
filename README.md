@@ -1,7 +1,16 @@
 ## Frontend URL Shortener
 
+### Desktop
 ![Screen shot](/assets/screenshot1.JPG)
 ![Screen shot](/assets/screenshot2.JPG)
+
+### Tablet & Laptop
+![Screen shot](/assets/screenshot5.JPG)
+![Screen shot](/assets/screenshot6.JPG)
+
+### Mobile
+![Screen shot](/assets/screenshot3.JPG)
+![Screen shot](/assets/screenshot4.JPG)
 
 ### `constWardtz Accounts`
 
