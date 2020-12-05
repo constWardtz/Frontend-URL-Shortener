@@ -97,8 +97,8 @@ img {
   /* Layout */
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
   /* ============================== Hero ============================== */
   /* Mobile Style */
   /* Laptop */
@@ -108,10 +108,12 @@ img {
   /* Laptop */
   /* Desktop */
   /* ============================== Footer ============================== */
+  /* Laptop & Table */
+  /* Laptop & Table */
 }
 
 .main-container .hero {
-  height: 100vh;
+  height: auto;
   max-width: 788px;
   margin: 20px;
   /* Showcase */
@@ -346,7 +348,7 @@ img {
 }
 
 .main-container .main {
-  height: 100vh;
+  height: auto;
   max-width: 788px;
   margin: 20px;
   padding: 5px;
@@ -366,6 +368,7 @@ img {
   padding: 40px 15px 40px 15px;
   border-radius: 5px;
   z-index: 5;
+  margin-top: 4rem;
   /* Layout */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -542,6 +545,87 @@ img {
   }
   .main-container .main .service-container .content .item:nth-child(4) p {
     font-size: 0.9rem;
+  }
+}
+
+.main-container .footer-container {
+  width: 100%;
+  text-align: center;
+}
+
+.main-container .footer-container .message {
+  background-color: var(--hero-color);
+  padding: 25px;
+  height: 180px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.main-container .footer-container .message h3 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.main-container .footer-container .message button {
+  background-color: var(--secondary);
+}
+
+.main-container .footer-container .footer {
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+}
+
+.main-container .footer-container .footer a {
+  color: var(--light);
+}
+
+.main-container .footer-container .footer .content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+.main-container .footer-container .footer .content .item {
+  padding: 10px;
+  line-height: 50px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.main-container .footer-container .footer .text {
+  border-top: 1px var(--thin) solid;
+  padding: 40px;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (min-width: 788px) {
+  .main-container .footer-container .message h3 {
+    font-size: 2rem;
+  }
+  .main-container .footer-container .footer .content {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1239px) {
+  .main-container .footer-container .message h3 {
+    font-size: 3rem;
+  }
+  .main-container .footer-container .footer .content {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
   }
 }
 /*# sourceMappingURL=index.css.map */

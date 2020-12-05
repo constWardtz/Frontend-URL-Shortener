@@ -92,13 +92,13 @@ img {
 .main-container {
   /* Layout */
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
 
   /* ============================== Hero ============================== */
 
   /* Mobile Style */
   .hero {
-    height: 100vh;
+    height: auto;
     max-width: 788px;
     margin: 20px;
 
@@ -325,7 +325,7 @@ img {
 
   /* ============================== Main ============================== */
   .main {
-    height: 100vh;
+    height: auto;
     max-width: 788px;
     margin: 20px;
     padding: 5px;
@@ -342,6 +342,7 @@ img {
       padding: 40px 15px 40px 15px;
       border-radius: 5px;
       z-index: 5;
+      margin-top: 4rem;
 
       /* Layout */
       display: flex;
@@ -519,8 +520,90 @@ img {
   }
 
   /* ============================== Footer ============================== */
-  //   .footer-container {
-  //     height: 80vh;
-  //     max-width: 788px;
-  //   }
+  .footer-container {
+    width: 100%;
+    text-align: center;
+
+    .message {
+      background-color: var(--hero-color);
+      padding: 25px;
+      height: 180px;
+
+      display: grid;
+      place-items: center;
+
+      h3 {
+        font-size: 1.7rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+      }
+      button {
+        background-color: var(--secondary);
+      }
+    }
+
+    .footer {
+      background-color: var(--secondary);
+      color: var(--light);
+      padding: 40px;
+
+      display: grid;
+      grid-template-rows: 1fr auto;
+
+      a {
+        color: var(--light);
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        .item {
+          padding: 10px;
+          line-height: 50px;
+          display: grid;
+        }
+      }
+
+      .text {
+        border-top: 1px var(--thin) solid;
+        padding: 40px;
+        text-align: center;
+        display: grid;
+        place-items: center;
+      }
+    }
+  }
+
+  /* Laptop & Table */
+  @media screen and (min-width: 788px) {
+    .footer-container {
+      .message {
+        h3 {
+          font-size: 2rem;
+        }
+      }
+      .footer {
+        .content {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+
+  /* Laptop & Table */
+  @media screen and (min-width: 1239px) {
+    .footer-container {
+      .message {
+        h3 {
+          font-size: 3rem;
+        }
+      }
+      .footer {
+        .content {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+    }
+  }
 }
