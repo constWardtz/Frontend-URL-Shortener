@@ -608,6 +608,7 @@ img {
 }
 
 .main-container .footer-container .footer .content {
+  margin: 15px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
