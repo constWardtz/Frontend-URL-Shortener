@@ -17,7 +17,7 @@ body {
   --thin: rgb(117, 116, 116);
 
   --transition: all ease-in-out 0.3s;
-  --shadow: rgb(223, 209, 209) 0 0 2px 0;
+  --shadow: rgb(223, 209, 209) 0 0 3px 0;
 }
 
 /* Reset */
@@ -103,7 +103,7 @@ img {
   .hero {
     height: auto;
     max-width: 788px;
-    margin: 20px;
+    margin: 20px 10px 20px 10px;
 
     .navbar {
       width: 100%;
@@ -115,7 +115,6 @@ img {
       align-items: center;
 
       .icon {
-        margin-left: 2rem;
         justify-self: end;
         i {
           font-size: 1.5rem;
@@ -131,19 +130,22 @@ img {
       /* Mobile */
       .menu.mobile {
         position: absolute;
+        right: 0;
         margin-top: 4rem;
+        margin-right: 1rem;
         z-index: 99;
         background-color: var(--primary);
-        width: 95%;
+        width: 20rem;
         padding: 20px;
-        border: 1px var(--thin) solid;
+        box-shadow: var(--shadow);
         border-radius: 5px;
         text-align: center;
 
         display: none;
 
-        @media screen and (max-width: 400px) {
-          width: 90%;
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          margin-right: 0;
         }
 
         .menu-item {
@@ -303,6 +305,7 @@ img {
     .hero {
       .showcase {
         margin: 130px 60px 0 60px;
+        margin-top: 4.8rem;
 
         .txt-container {
           h1 {
@@ -454,6 +457,7 @@ img {
         justify-self: center;
         flex-direction: row;
         padding: 50px;
+        margin-top: 6.6rem;
 
         button {
           margin-bottom: 1rem;
