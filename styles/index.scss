@@ -12,9 +12,13 @@ body{
 :root{
     --primary: rgb(241, 241, 241);
     --secondary: rgb(27, 27, 27);
-    --main-color: rgb(102, 179, 243);
+    --hero-color: rgb(102, 179, 243);
+    --light: rgb(244, 250, 252);
+    --thin: rgb(117, 116, 116);
 
-    --transition: all ease-in-out .5s;
+
+    --transition: all ease-in-out .3s;
+    --shadow: rgb(223, 209, 209) 0 0 2px 0;
 }
 /* Reset */ 
 a {
@@ -28,6 +32,7 @@ ul, li {
 
 button{
     padding: 10px;
+    border-radius: 5px;
 }
 
 body{
@@ -35,9 +40,17 @@ body{
     color: var(--secondary);
 }
 
-button{
-    background-color: var(--main-color);
+input{
+    outline: none;
     padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+button{
+    background-color: var(--hero-color);
+    padding: 15px;
     border: none;
     outline: none;
     color: var(--primary);
@@ -60,28 +73,31 @@ img{
 }
 
 /* Mobile Style */ 
-.main{
+.hero{
     height: 100vh;
-    max-width: 900px;
+    max-width: 788px;
     margin: 30px;
 
     .navbar{
         // position: fixed;
         // top: 0;
-        width: 100%;   
+        
+        width: 100%;    
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        place-items: center;
-
+        justify-content: space-between;
+        align-items: center;
+        
         .icon{
             margin-left: 2rem;
+            justify-self: end;
             i{
                 font-size: 1.5rem;
 
                 &:hover{
                     cursor: pointer;
-                    color: var(--main-color);
+                    color: var(--hero-color);
                     transition: var(--transition)
                 }
             }
@@ -96,9 +112,15 @@ img{
     .showcase{
         display: grid;
         margin-top: 5rem;
+        place-items: center;
 
         .img-container{
+            position: relative;
             grid-row: 2/1;
+
+            img{
+                max-width: 403px;
+            }
         }
 
         .txt-container{
@@ -107,6 +129,7 @@ img{
             grid-gap: .8rem;
 
             h1{
+                font-weight: 700;
                 font-size: 2.5rem;
             }
 
@@ -118,27 +141,86 @@ img{
 }
 
 /* Laptop */ 
-@media screen and (min-width: 901px){
-   .main{
+@media screen and (min-width: 789px){
+   .hero{
         margin: 20px;
         max-width: unset;
-
+        
         .navbar{
+            place-items: center;
+            justify-content: unset;
+            align-items: center;
+            padding: 10px;
             .icon{
-                margin-left: 0;
+                justify-self: end;
+                margin-right: 60px;
+                display: none;
+            }
+
+            .logo{
+                justify-self: start;
+                margin-left: 50px;
+            }
+
+            .menu{
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                grid-gap: 30px;
+
+                .menu-item{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 700;
+
+
+                    li{
+                        padding: 10px;
+
+                        a{
+                            &:hover{
+                                color: var(--hero-color);
+                                transition: var(--transition);
+                            }
+                        }
+                    }
+                }
+
+                .actions{
+                    display: grid;
+                    grid-template-columns: repeat(2, auto);
+                    grid-gap: 1rem;
+                    button{
+                        width: 6rem;
+                        font-weight: 700;
+                    }
+
+                    button:nth-child(1){
+                        background: none;
+                        color: var(--secondary);
+                            &:hover{
+                                transition: var(--transition);
+                                color: var(--hero-color);
+                            }
+                    }
+                }
             }
         } 
 
         .showcase{
+            margin: 180px 60px 0 60px;
             grid-template-columns: repeat(2, 1fr);
             place-items: center;
             grid-gap: 2rem;
+
             .txt-container{
+                grid-row: 2/1;
                 margin-top: unset;
                 grid-gap: .8rem;
 
                 h1{
-                    font-size: 5em;
+                    font-size: 3.5rem;
+                    font-weight: 900;
                 }
 
                 p{
@@ -150,3 +232,250 @@ img{
 }
 
 /* Desktop */ 
+@media screen and (min-width: 1024px){
+     .hero{
+
+        .showcase{
+            margin: 130px 60px 0 60px;
+
+            .txt-container{
+                h1{
+                    font-size: 5rem;
+                }
+                button{
+                    width: 50%;
+                }
+            }
+
+            
+            .img-container{
+                img{
+                    max-width: unset;
+                }
+            }
+
+        }
+   }
+}
+
+
+/* ============================== Main ============================== */ 
+.main{
+    height: 100vh;
+    max-width: 788px;
+    margin: 30px;
+
+    /* Layout */
+    display: grid;
+
+    /* Shrink Container */ 
+    .shrink-container{
+        width: 100%;
+        height: 150px;
+        background-color: var(--hero-color);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 5;
+
+        /* Layout */ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        input{
+            padding: 20px;
+            width: 100%;
+            font-size: 1.2rem;
+        }
+
+        button{
+            background-color: var(--secondary);
+            margin-top: 1rem;
+            width: 100%;
+            padding: 15px;
+        }
+    }
+
+    /* Service Container */ 
+    .service-container{
+        height: 100vh;
+        margin-top: 4rem;
+        .content{
+            display: grid;
+
+            .intro{
+                text-align: center;
+                line-height: 23px;
+                margin-bottom:  2rem;
+
+                h3{
+                    padding: 10px;
+                    line-height: 33px;
+                    margin-top: -2rem;
+                }
+
+                p{
+                    color: var(--thin);
+                    font-size: .9rem;
+                }
+            }
+
+            .item{
+                background-color: var(--light);
+                padding: 25px;
+                margin: 2rem 0 2rem 0;
+                box-shadow: var(--shadow);
+                border-radius: 5px;
+                text-align: center;
+                line-height: 23px;
+
+                /* Layout */ 
+                display: grid;
+                place-items: center;
+
+                i{
+                    font-size: 2rem;
+                    z-index: 2;
+                    background-color: var(--hero-color);
+                    padding: 25px;
+                    border-radius: 50%;
+                    position: relative;
+                    top: -40px;
+                }
+
+                p{
+                    color: var(--thin);
+                    font-size: .9rem;
+                }
+
+                h3{
+                    padding: 10px;
+                    line-height: 33px;
+                    margin-top: -2rem;
+                }
+            }
+        }
+    }
+}
+
+// /* Message Container */ 
+// .message-container{
+//     margin-top: 20rem;
+//     background-color: var(--hero-color);
+//     width: 100%;
+//     height: 200px;
+
+//     /* Layout */ 
+//     display: grid;
+//     place-items: center;
+
+//     h1{
+//         position: relative;
+//         top: 30px;
+//         font-size: 2.3rem;
+//     }
+
+//     button{
+//         background-color: var(--secondary);
+//         padding: 15px;
+//         width: 30%;
+//     }
+// }
+
+/* Tablet */ 
+@media screen and (max-width: 668px){
+    .message-container{
+        margin-top: 28rem;
+    }
+}
+
+/* Laptop */ 
+@media screen and (min-width: 789px){
+   
+}
+
+/* Desktop */ 
+@media screen and (min-width: 861px){
+    .main{
+        max-width: unset;
+
+        .service-container{
+            margin-top: 7rem;
+
+            .content{
+                grid-template-columns: auto;
+                grid-gap: 1rem;
+
+                .intro{
+                    grid-column: 1/3;
+
+                    h3{
+                        font-size: 3rem;
+                    }
+
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+                .item:nth-child(2){
+                    grid-column: 1/2;
+
+                    h3{
+                        font-size: 1.8rem;
+                    }
+
+                    p{
+                        font-size: .9rem;
+                    }
+                }
+                .item:nth-child(3){
+                    grid-column: 2/3;
+
+                    h3{
+                        font-size: 1.8rem;
+                    }
+
+                    p{
+                        font-size: .9rem;
+                    }
+                }
+                .item:nth-child(4){
+                    grid-column: 1/3;
+
+                    h3{
+                        font-size: 1.8rem;
+                    }
+
+                    p{
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    /* Message Container */ 
+    // .message-container{
+    //     margin-top: 10rem;
+    //     background-color: var(--hero-color);
+    //     width: 100%;
+    //     height: 200px;
+
+    //     /* Layout */ 
+    //     display: grid;
+    //     place-items: center;
+
+    //     h1{
+    //         position: relative;
+    //         top: 30px;
+    //         font-size: 2.3rem;
+    //     }
+
+    //     button{
+    //         background-color: var(--secondary);
+    //         padding: 15px;
+    //         width: 30%;
+    //     }
+    // }
+}
