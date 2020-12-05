@@ -2,8 +2,8 @@
 
 A project of mine.
 
-![Screen shot](./assets/screenshot1.jpg)
-![Screen shot](./assets/screenshot2.jpg)
+![Screen shot](/assets/screenshot1.JPG)
+![Screen shot](/assets/screenshot2.JPG)
 
 ### `constWardtz Accounts`
 
