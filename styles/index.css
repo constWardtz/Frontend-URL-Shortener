@@ -227,7 +227,7 @@ img {
   line-height: 1.5rem;
 }
 
-@media screen and (min-width: 838px) {
+@media screen and (min-width: 835px) {
   .main-container .hero {
     margin: 20px;
     max-width: unset;

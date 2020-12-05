@@ -1,17 +1,21 @@
 const toggleNavbar = document.querySelector(`#toggle-navbar`)
 const navbarMobile = document.querySelector(`#navbar-mobile`)
 
+const burgerBtn = 'fa-bars'
+const closeBtn = 'fa-close'
+
+
 toggleNavbar.addEventListener(`click`, () => {
-    if (toggleNavbar.classList.contains('fa-bars')) {
-        toggleNavbar.classList.remove('fa-bars')
-        toggleNavbar.classList.add('fa-close')
+    if (toggleNavbar.classList.contains(burgerBtn)) {
+        toggleNavbar.classList.remove(burgerBtn)
+        toggleNavbar.classList.add(closeBtn)
 
         navbarMobile.style = `
             display: grid;
         `
-    } else if (toggleNavbar.classList.contains('fa-close')) {
-        toggleNavbar.classList.add('fa-bars')
-        toggleNavbar.classList.remove('fa-close')
+    } else if (toggleNavbar.classList.contains(closeBtn)) {
+        toggleNavbar.classList.add(burgerBtn)
+        toggleNavbar.classList.remove(closeBtn)
 
         navbarMobile.style = `
             display: none;
