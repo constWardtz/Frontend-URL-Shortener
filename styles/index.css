@@ -567,7 +567,7 @@ img {
 
 .main-container .footer-container {
   width: 100%;
-  text-align: center;
+  text-align: start;
 }
 
 .main-container .footer-container .message {
@@ -619,6 +619,11 @@ img {
   line-height: 50px;
   display: -ms-grid;
   display: grid;
+}
+
+.main-container .footer-container .footer .content .social-media span i {
+  font-size: 1.2rem;
+  padding-right: 5px;
 }
 
 .main-container .footer-container .footer .text {

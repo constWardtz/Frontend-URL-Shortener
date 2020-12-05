@@ -537,7 +537,7 @@ img {
   /* ============================== Footer ============================== */
   .footer-container {
     width: 100%;
-    text-align: center;
+    text-align: start;
 
     .message {
       background-color: var(--hero-color);
@@ -581,6 +581,15 @@ img {
           padding: 10px;
           line-height: 50px;
           display: grid;
+        }
+
+        .social-media {
+          span {
+            i {
+              font-size: 1.2rem;
+              padding-right: 5px;
+            }
+          }
         }
       }
 
