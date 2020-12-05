@@ -1,6 +1,4 @@
-## Mini React Redux Shopping Cart
-
-A project of mine.
+## Frontend URL Shortener
 
 ![Screen shot](/assets/screenshot1.JPG)
 ![Screen shot](/assets/screenshot2.JPG)
