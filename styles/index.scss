@@ -39,6 +39,9 @@ body {
   user-select: none;
 }
 
+span {
+  color: var(--hero-color);
+}
 a {
   text-decoration: none;
   color: var(--secondary);
@@ -534,7 +537,6 @@ img {
 
       h3 {
         font-size: 1.7rem;
-        font-weight: 800;
         margin-bottom: 1rem;
       }
       button {
