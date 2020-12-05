@@ -21,6 +21,13 @@ body {
 }
 
 /* Reset */
+.menu {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 a {
   text-decoration: none;
   color: var(--secondary);
@@ -93,12 +100,13 @@ img {
 .main-container .hero {
   height: 100vh;
   max-width: 788px;
-  margin: 30px;
+  margin: 20px;
   /* Showcase */
 }
 
 .main-container .hero .navbar {
   width: 100%;
+  /* Layout */
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -109,6 +117,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* Mobile */
 }
 
 .main-container .hero .navbar .icon {
@@ -128,7 +137,46 @@ img {
   transition: var(--transition);
 }
 
-.main-container .hero .navbar .menu {
+.main-container .hero .navbar .menu.mobile {
+  position: absolute;
+  margin-top: 4rem;
+  z-index: 99;
+  background-color: var(--primary);
+  width: 95%;
+  padding: 20px;
+  border: 1px var(--thin) solid;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  .main-container .hero .navbar .menu.mobile {
+    width: 90%;
+  }
+}
+
+.main-container .hero .navbar .menu.mobile .menu-item {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+  margin-bottom: 1rem;
+}
+
+.main-container .hero .navbar .menu.mobile .actions {
+  border-top: 1px #cecbcb solid;
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.main-container .hero .navbar .menu.mobile .actions button:nth-child(1) {
+  background: none;
+  color: var(--secondary);
+}
+
+.main-container .hero .navbar .desktop {
   display: none;
 }
 
@@ -180,6 +228,7 @@ img {
         -ms-flex-align: center;
             align-items: center;
     padding: 10px;
+    /* Mobile */
   }
   .main-container .hero .navbar .icon {
     -ms-grid-column-align: end;
@@ -239,6 +288,9 @@ img {
     transition: var(--transition);
     color: var(--hero-color);
   }
+  .main-container .hero .navbar .menu.mobile {
+    display: none !important;
+  }
   .main-container .hero .showcase {
     margin: 180px 60px 0 60px;
     -ms-grid-columns: (1fr)[2];
@@ -283,7 +335,7 @@ img {
 .main-container .main {
   height: 100vh;
   max-width: 788px;
-  margin: 30px;
+  margin: 20px;
   padding: 5px;
   /* Layout */
   display: -ms-grid;

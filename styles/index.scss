@@ -20,6 +20,11 @@ body {
   --shadow: rgb(223, 209, 209) 0 0 2px 0;
 }
 /* Reset */
+
+.menu {
+  user-select: none;
+}
+
 a {
   text-decoration: none;
   color: var(--secondary);
@@ -81,14 +86,12 @@ img {
   .hero {
     height: 100vh;
     max-width: 788px;
-    margin: 30px;
+    margin: 20px;
 
     .navbar {
-      // position: fixed;
-      // top: 0;
-
       width: 100%;
 
+      /* Layout */
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-between;
@@ -108,7 +111,44 @@ img {
         }
       }
 
-      .menu {
+      /* Mobile */
+      .menu.mobile {
+        position: absolute;
+        margin-top: 4rem;
+        z-index: 99;
+        background-color: var(--primary);
+        width: 95%;
+        padding: 20px;
+        border: 1px var(--thin) solid;
+        border-radius: 5px;
+        text-align: center;
+
+        display: none;
+
+        @media screen and (max-width: 400px) {
+          width: 90%;
+        }
+
+        .menu-item {
+          display: grid;
+          grid-gap: 15px;
+          margin-bottom: 1rem;
+        }
+
+        .actions {
+          border-top: 1px rgb(206, 203, 203) solid;
+          margin-top: 2rem;
+          display: grid;
+          grid-gap: 10px;
+
+          button:nth-child(1) {
+            background: none;
+            color: var(--secondary);
+          }
+        }
+      }
+
+      .desktop {
         display: none;
       }
     }
@@ -210,6 +250,11 @@ img {
             }
           }
         }
+
+        /* Mobile */
+        .menu.mobile {
+          display: none !important;
+        }
       }
 
       .showcase {
@@ -268,7 +313,7 @@ img {
   .main {
     height: 100vh;
     max-width: 788px;
-    margin: 30px;
+    margin: 20px;
     padding: 5px;
 
     /* Layout */

@@ -20,14 +20,26 @@
       <!-- Hero -->
       <div class="hero">
         <!-- Navbar -->
-        <div class="navbar grid">
+        <div class="navbar desktop">
           <div class="logo">
             <a href="#"><h1>Shortly!</h1></a>
           </div>
           <div class="icon">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars" id="toggle-navbar"></i>
           </div>
-          <ul class="menu">
+          <ul class="menu desktop">
+            <div class="menu-item">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Resources</a></li>
+            </div>
+            <div class="actions">
+              <button>Sign In</button>
+              <button>Sign Up</button>
+            </div>
+          </ul>
+
+          <ul class="menu mobile" id="navbar-mobile">
             <div class="menu-item">
               <li><a href="#">Features</a></li>
               <li><a href="#">Pricing</a></li>
@@ -148,5 +160,8 @@
         </div>
       </div> -->
     </div>
+
+    <!-- Script -->
+    <script defer src="./js/script.js"></script>
   </body>
 </html>
