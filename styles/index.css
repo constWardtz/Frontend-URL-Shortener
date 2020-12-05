@@ -42,7 +42,7 @@ body {
 }
 
 span {
-  color: var(--hero-color);
+  color: var(--hero-color) !important;
 }
 
 a {
@@ -587,6 +587,11 @@ img {
 
 .main-container .footer-container .footer a {
   color: var(--light);
+}
+
+.main-container .footer-container .footer a:hover {
+  color: var(--hero-color);
+  text-decoration: underline;
 }
 
 .main-container .footer-container .footer .content {

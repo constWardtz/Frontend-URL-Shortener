@@ -40,7 +40,7 @@ body {
 }
 
 span {
-  color: var(--hero-color);
+  color: var(--hero-color) !important;
 }
 a {
   text-decoration: none;
@@ -554,6 +554,11 @@ img {
 
       a {
         color: var(--light);
+
+        &:hover {
+          color: var(--hero-color);
+          text-decoration: underline;
+        }
       }
 
       .content {
