@@ -537,7 +537,7 @@ img {
   /* ============================== Footer ============================== */
   .footer-container {
     width: 100%;
-    text-align: start;
+    text-align: center;
 
     .message {
       background-color: var(--hero-color);
@@ -611,6 +611,7 @@ img {
   /* Laptop & Table */
   @media screen and (min-width: 788px) {
     .footer-container {
+      text-align: start;
       .message {
         h3 {
           font-size: 2rem;

@@ -567,7 +567,7 @@ img {
 
 .main-container .footer-container {
   width: 100%;
-  text-align: start;
+  text-align: center;
 }
 
 .main-container .footer-container .message {
@@ -641,6 +641,9 @@ img {
 }
 
 @media screen and (min-width: 788px) {
+  .main-container .footer-container {
+    text-align: start;
+  }
   .main-container .footer-container .message h3 {
     font-size: 2rem;
   }
