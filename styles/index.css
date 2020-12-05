@@ -632,6 +632,7 @@ img {
 
 .main-container .footer-container .footer .text a {
   color: var(--hero-color);
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 788px) {
