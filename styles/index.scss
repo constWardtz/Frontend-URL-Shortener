@@ -225,7 +225,7 @@ img {
 
         .logo {
           justify-self: start;
-          margin-left: 50px;
+          margin-left: 30px;
         }
 
         .menu {
@@ -279,7 +279,7 @@ img {
       }
 
       .showcase {
-        margin: 180px 60px 0 60px;
+        margin: 150px 60px 0 40px;
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
         grid-gap: 2rem;
@@ -305,6 +305,11 @@ img {
   /* Desktop */
   @media screen and (min-width: 1024px) {
     .hero {
+      .navbar {
+        .logo {
+          margin-left: 50px;
+        }
+      }
       .showcase {
         margin: 130px 60px 0 60px;
         margin-top: 4.8rem;
